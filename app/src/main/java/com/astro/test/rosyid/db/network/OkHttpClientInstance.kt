@@ -1,4 +1,4 @@
-package com.astro.test.rosyid.network
+package com.astro.test.rosyid.db.network
 
 import okhttp3.OkHttpClient
 import okhttp3.ResponseBody
@@ -21,7 +21,7 @@ object OkHttpClientInstance {
                     val newRequestBuilder = chain.request().newBuilder()
                         .addHeader(
                             "Authorization",
-                            "token 7a0c2e4541faeb65b97b48e93a9881c3f8409fac"
+                            "token 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"
                         )
                         .addHeader(
                             "User-Agent",

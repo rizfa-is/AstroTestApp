@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Astro Test App</string>
+
+    <string name="empty">EMPTY</string>
+    <string name="laading">Laading . . .</string>
+    <string name="network_info">Network Info !</string>
+    <string name="no_internet">No internet connection\nCheck your internet connectivity and try again</string>
+    <string name="success_upload_image">Success upload image.</string>
+    <string name="asc">ASC</string>
+    <string name="desc">DESC</string>
 </resources>

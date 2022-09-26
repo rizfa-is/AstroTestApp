@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".developer.DeveloperActivity">
+
+        <SearchView
+            android:id="@+id/sv_developer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/btnFavorite"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/btnFavorite"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginHorizontal="16dp"
+            android:src="@drawable/ic_baseline_favorite_24"
+            app:layout_constraintBottom_toBottomOf="@+id/sv_developer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/sv_developer"
+            app:layout_constraintTop_toTopOf="@+id/sv_developer" />
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/rvDeveloper"
+            app:layout_constraintTop_toBottomOf="@+id/sv_developer">
+
+            <RadioButton
+                android:id="@+id/radio_asc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:text="@string/asc"
+                android:textSize="17sp"
+                android:textStyle="bold"/>
+
+            <RadioButton
+                android:id="@+id/radio_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:text="@string/desc"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+        </RadioGroup>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvDeveloper"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radio_group" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/rv_placeholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="iv_placeholder, tv_empty"/>
+
+        <ImageView
+            android:id="@+id/iv_placeholder"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:src="@drawable/placeholder_image"
+            app:layout_constraintEnd_toEndOf="@+id/rvDeveloper"
+            app:layout_constraintStart_toStartOf="@+id/rvDeveloper"
+            app:layout_constraintTop_toTopOf="@+id/rvDeveloper" />
+
+        <TextView
+            android:id="@+id/tv_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="30dp"
+            android:text="@string/empty"
+            app:layout_constraintEnd_toEndOf="@+id/iv_placeholder"
+            app:layout_constraintStart_toStartOf="@+id/iv_placeholder"
+            app:layout_constraintTop_toBottomOf="@+id/iv_placeholder" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

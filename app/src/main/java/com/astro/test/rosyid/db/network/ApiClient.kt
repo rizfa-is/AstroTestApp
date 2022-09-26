@@ -1,4 +1,4 @@
-package com.astro.test.rosyid.network
+package com.astro.test.rosyid.db.network
 
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import com.squareup.moshi.Moshi
@@ -8,7 +8,7 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 
 class ApiClient {
 
-    private val BASE_URL = "https://api.github.com/users/"
+    private val BASE_URL = "https://api.github.com/"
     private val moshi = Moshi.Builder().add(KotlinJsonAdapterFactory()).build()
     private val okHttpClient = OkHttpClientInstance.Builder().buildToken()
 
